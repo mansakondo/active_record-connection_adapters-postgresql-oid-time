@@ -6,6 +6,7 @@ module ActiveRecord
 
         prepended do
           ActiveRecord::Type.register(:pg_time, OID::Time, adapter: :postgresql)
+          ActiveModel::Type.register(:pg_time, OID::Time)
         end
 
         class_methods do
