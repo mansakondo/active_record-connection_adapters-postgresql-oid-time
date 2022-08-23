@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Specify your gem's dependencies in active_record-connection_adapters-postgresql-oid-time.gemspec.
 gemspec
 
+gem "rails"
 gem "pg"
 gem "puma"
 

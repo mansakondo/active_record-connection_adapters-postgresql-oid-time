@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     activerecord-connection_adapters-postgresql-oid-time (0.1.0)
-      rails (>= 6.0)
+      activerecord (>= 6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -158,6 +158,7 @@ DEPENDENCIES
   activerecord-connection_adapters-postgresql-oid-time!
   pg
   puma
+  rails
 
 BUNDLED WITH
    2.3.20
