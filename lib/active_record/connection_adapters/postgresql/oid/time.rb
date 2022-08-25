@@ -8,6 +8,15 @@ module ActiveRecord
     module PostgreSQL
       module OID
         class Time < Type::Value
+          def initialize(array: false)
+            super()
+            @array_type = ActiveRecord::Type.lookup(:pg_time, array: true) if array
+          end
+
+          def array?
+            array_type
+          end
+
           class Value < Type::Time::Value
             def initialize(ruby_time, postgres_time)
               super(ruby_time)
@@ -45,18 +54,28 @@ module ActiveRecord
           end
 
           def serialize(value)
-            value.to_s
+            if array?
+              array_type.serialize value
+            else
+              value.to_s
+            end
           end
 
           private
+            attr_reader :array_type
+
             def cast_value(value)
-              case value
-              when String
-                Value.new(::Time.parse(value), value)
-              when Value
-                value
+              if array?
+                array_type.cast value
               else
-                return
+                case value
+                when String
+                  Value.new(::Time.parse(value), value)
+                when Value
+                  value
+                else
+                  return
+                end
               end
             end
         end
