@@ -8,17 +8,14 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "activerecord-connection_adapters-postgresql-oid-time"
+gem "active_record-connection_adapters-postgresql-oid-time",
+  github: "mansakondo/active_record-connection_adapters-postgresql-oid-time",
+  branch: "main"
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install activerecord-connection_adapters-postgresql-oid-time
 ```
 
 ## Contributing
