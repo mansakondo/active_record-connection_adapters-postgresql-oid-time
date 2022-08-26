@@ -1,7 +1,7 @@
 require_relative "lib/active_record/connection_adapters/postgresql/oid/time/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "activerecord-connection_adapters-postgresql-oid-time"
+  spec.name        = "active_record-connection_adapters-postgresql-oid-time"
   spec.version     = ActiveRecord::ConnectionAdapters::Postgresql::Oid::Time::VERSION
   spec.authors     = ["mansakondo"]
   spec.email       = ["mansakondo22@gmail.com"]

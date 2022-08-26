@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    activerecord-connection_adapters-postgresql-oid-time (0.1.0)
+    active_record-connection_adapters-postgresql-oid-time (0.1.0)
       activerecord (>= 6.0)
 
 GEM
@@ -155,7 +155,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activerecord-connection_adapters-postgresql-oid-time!
+  active_record-connection_adapters-postgresql-oid-time!
   pg
   puma
   rails
