@@ -1,0 +1,9 @@
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <%= link_to "#{event.start} - #{event.end}", event %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New event", new_event_path %>

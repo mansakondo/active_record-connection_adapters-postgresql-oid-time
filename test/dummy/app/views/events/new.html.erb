@@ -1,0 +1,6 @@
+<h1>Events#new</h1>
+<%= form_with model: @event do |event_form| %>
+  <%= event_form.text_field :start %>
+  <%= event_form.text_field :end %>
+  <%= event_form.submit %>
+<% end %>
